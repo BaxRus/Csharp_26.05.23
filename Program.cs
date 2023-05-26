@@ -1,37 +1,24 @@
-﻿// Задача №17. Напишите программу, которая принимает
-//  на вход координаты точки (X и Y),
-// причем X ≠ 0 и Y ≠ 0 и выдаёт номер
-// четверти плоскости, в которой находится эта точка.
+﻿// Напишите программу, которая принимает
+// на вход координаты двух точек и находит
+//  расстояние между ними в 2D пространстве.
 
-Console.WriteLine("Введите число от 1 до 4");
-int num = Convert.ToInt32(Console.ReadLine());
+// A (3,6); B (2,1) -> 5,09
+// A (7,-5); B (1,-1) -> 7,21
 
-switch(num)
-{
-    case 1:
-    {
-        Console.WriteLine("X>0, Y>0");
-        break;
-    }
-    case 2:
-    {
-        Console.WriteLine("X<0, Y>0");
-        break;
-    }
-    case 3:
-    {
-        Console.WriteLine("X<0, Y<0");
-        break;
-    }
-    case 4:
-    {
-        Console.WriteLine("X>0, Y<0");
-        break;
-    }
-    default:
-    {
-        Console.WriteLine("Ввели некоректное число");
-        break;
-    }
+// d (X2-X1)*(X2-X1)+ (Y2-Y1)2
 
-}
+Console.WriteLine("Введите число");
+int X1 = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Введите число");
+int Y1 = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Введите число");
+double X2 = Convert.ToDouble(Console.ReadLine());
+
+Console.WriteLine("Введите число");
+int Y2 = Convert.ToInt32(Console.ReadLine());
+
+double d =Math.Sqrt(Math.Pow((X2-X1),2)+Math.Pow((Y2-Y1),2));
+
+Console.WriteLine(d);
